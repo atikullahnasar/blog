@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "atikullahnasar\\blof\\Provider\\BlogPackageServiceProvider"
+                "atikullahnasar\\blog\\Provider\\BlogPackageServiceProvider"
             ]
         }
     }
