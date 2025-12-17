@@ -6,6 +6,8 @@ Installation Guide
 
 Follow these steps to install and set up the package in your Laravel project:
 at first add "repositories": [ { "type": "vcs", "url": "https://github.com/atikullahnasar/blog" } ], this to your composer.json file
+
+
 Step 1: Install the Package
 composer require atikullahnasar/blog:dev-main
 
