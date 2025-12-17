@@ -1,7 +1,7 @@
 Blog Package:
 
 A simple and flexible Laravel package for managing blog posts with built-in migrations, routes, and admin panel integration.
-
+must need to be have any kinds of authentication system
 Installation Guide
 
 Follow these steps to install and set up the package in your Laravel project:
