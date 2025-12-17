@@ -20,10 +20,10 @@ php artisan migrate
 Step 4 (Final): Access Blog Management
 
 After installation, open:
-/beft/blogs
-/beft/blogs
+1. /beft/blog-categories
+2. /beft/blogs
 
 
 Example:
-
-http://example.com/beft/blogs
+1. http://example.com/beft/blog-categories
+2. http://example.com/beft/blogs
