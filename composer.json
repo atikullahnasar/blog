@@ -14,7 +14,9 @@
     "require": {
         "php": "^8.1",
         "illuminate/support": "^10.0|^11.0|^12.0",
-        "yajra/laravel-datatables-oracle": "^12.4"
+        "yajra/laravel-datatables-oracle": "^12.4",        
+        "intervention/image": "^3.11",
+        "intervention/image-laravel": "^1.5"
     },
     "extra": {
         "laravel": {
