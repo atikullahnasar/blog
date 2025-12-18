@@ -1,12 +1,13 @@
 Blog Package:
 
 A simple and flexible Laravel package for managing blog posts with built-in migrations, routes, and admin panel integration.
-must need to be have any kinds of authentication system
-Installation Guide
+Installation Guide:
+must need to be have any kinds of authentication system.This package is not published on Packagist yet, so you need to add the GitHub repository manually to your main project’s composer.json file.
 
-Follow these steps to install and set up the package in your Laravel project:
-at first add "repositories": [ { "type": "vcs", "url": "https://github.com/atikullahnasar/blog" } ], this to your composer.json file
+Add the following inside composer.json:
+"repositories": [ { "type": "vcs", "url": "https://github.com/atikullahnasar/blog" } ]
 
+Save the file after adding this.
 
 Step 1: Install the Package
 composer require atikullahnasar/blog:dev-main
