@@ -20,8 +20,14 @@ class BlogPackageServiceProvider extends ServiceProvider
         // Load routes
         $this->loadRoutesFrom(__DIR__ . '/../Routes/web.php');
 
-        // Load views
-        $this->loadViewsFrom(__DIR__ . '/../Resources/views', 'blogs');
+        // Publish config
+        $this->publishes([
+            __DIR__ . '/../Config/blog.php' => config_path('blog.php'),
+        ], 'blog-config');
+
+        // Load views based on config
+        $layout = config('blog.layout', 'bootstrap');
+        $this->loadViewsFrom(__DIR__ . '/../Resources/views/' . $layout, 'blogs');
 
         // Publish migrations
         $this->publishes([

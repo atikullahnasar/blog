@@ -19,7 +19,7 @@ return new class extends Migration
             $table->longText('content');
             $table->boolean('show_home')->default(false);
             $table->foreignId('category_id')
-                ->constrained('beft_blog_categories')
+                ->constrained('blog_categories')
                 ->onDelete('cascade');
             $table->foreignId('author_id')
                 ->constrained('users')
