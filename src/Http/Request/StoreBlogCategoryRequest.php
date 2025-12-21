@@ -29,7 +29,7 @@ class StoreBlogCategoryRequest extends FormRequest
                 'required',
                 'string',
                 'max:255',
-                Rule::unique('blog_categories', 'name')->ignore($id),
+                Rule::unique('beft_blog_categories', 'name')->ignore($id),
             ],
             'description' => 'nullable|string',
             'meta_title' => 'nullable|string|max:255',

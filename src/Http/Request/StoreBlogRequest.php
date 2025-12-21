@@ -28,10 +28,10 @@ class StoreBlogRequest extends FormRequest
     {
         $id = $this->id;
         return [
-            'title' => [ 'required', 'string', 'max:255', Rule::unique('blogs', 'title')->ignore($id)],
+            'title' => [ 'required', 'string', 'max:255', Rule::unique('beft_blogs', 'title')->ignore($id)],
             'content' => 'required|string',
             'excerpt' => 'nullable|string',
-            'category_id' => 'required|exists:blog_categories,id',
+            'category_id' => 'required|exists:beft_blog_categories,id',
             'featured_image' => 'nullable|image|max:2048',
             'meta_title' => 'nullable|string|max:255',
             'meta_description' => 'nullable|string',
