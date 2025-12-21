@@ -15,6 +15,9 @@ composer require atikullahnasar/blog:dev-main
 Step 2: Publish the Migrations
 php artisan vendor:publish --provider="atikullahnasar\blog\Provider\BlogPackageServiceProvider" --tag=blog-migrations
 
+publish the config file:
+php artisan vendor:publish --tag=blog-config
+
 Step 3: Run the Migrations
 php artisan migrate
 
