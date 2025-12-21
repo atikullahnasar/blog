@@ -16,7 +16,8 @@
         "illuminate/support": "^10.0|^11.0|^12.0",
         "yajra/laravel-datatables-oracle": "^12.4",        
         "intervention/image": "^3.11",
-        "intervention/image-laravel": "^1.5"
+        "intervention/image-laravel": "^1.5",
+        "laravel/ui": "^4.0"
     },
     "extra": {
         "laravel": {
