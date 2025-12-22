@@ -7,7 +7,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     <link href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" rel="stylesheet">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
@@ -34,14 +35,14 @@
     <div class="bg-white p-6 rounded-lg shadow">
         <table id="blogs-table" class="w-full text-left border-collapse">
             <thead>
-            <tr class="bg-gray-100 border-b">
-                <th class="p-3 font-semibold text-gray-700">Image</th>
-                <th class="p-3 font-semibold text-gray-700">Title</th>
-                <th class="p-3 font-semibold text-gray-700">Category</th>
-                <th class="p-3 font-semibold text-gray-700">Publish Date</th>
-                <th class="p-3 font-semibold text-gray-700">Status</th>
-                <th class="p-3 font-semibold text-center text-gray-700">Action</th>
-            </tr>
+                <tr class="bg-gray-100 border-b">
+                    <th class="p-3 font-semibold text-gray-700">Image</th>
+                    <th class="p-3 font-semibold text-gray-700">Title</th>
+                    <th class="p-3 font-semibold text-gray-700">Category</th>
+                    <th class="p-3 font-semibold text-gray-700">Publish Date</th>
+                    <th class="p-3 font-semibold text-gray-700">Status</th>
+                    <th class="p-3 font-semibold text-center text-gray-700">Action</th>
+                </tr>
             </thead>
         </table>
     </div>
@@ -113,7 +114,7 @@
                                     <div class="mt-2"><img id="imagePreview" src="" alt="preview" class="img-thumb hidden"></div>
                                 </div>
                             </div>
-                        
+
                             <div class="mt-6 flex justify-end space-x-3">
                                 <button type="button" class="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50" id="btnCancel">Cancel</button>
                                 <button type="submit" class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700">Save</button>
@@ -223,7 +224,7 @@
     });
 
     $('#addNewModal').on('click', ()=>{ resetForm(); $('#modal-title').text('Create New Blog'); loadCategories().always(()=>toggleModal('addEditBlogModal', true)); });
-    
+
     // Close modal handlers
     $('#addEditClose, #btnCancel, #modalBackdrop').on('click', ()=>toggleModal('addEditBlogModal', false));
 
@@ -239,7 +240,7 @@
             $('#blog-id').val(data.id); $('#title').val(data.title); $('#category_id').val(data.category?.id??'');
             $('#status').val(data.status??'draft'); $('#show_home').prop('checked',data.show_home==1);
             $('#published_at').val(data.published_at??''); quill.root.innerHTML=data.content??'';
-            $('#content_hidden').val(data.content??''); 
+            $('#content_hidden').val(data.content??'');
             if(data.thumbnail_image) $('#imagePreview').attr('src',data.thumbnail_image).removeClass('hidden').addClass('block');
             $('#modal-title').text('Edit Blog'); toggleModal('addEditBlogModal', true);
         }).fail(()=>alert('Failed to load blog'));
@@ -255,7 +256,7 @@
         pendingDeleteId=$(this).data('id');
         toggleModal('confirmationModal', true);
     });
-    
+
     $('#cancelConfirmBtn, #confirmBackdrop').on('click', ()=>toggleModal('confirmationModal', false));
 
     $('#confirmDeleteBtn').on('click',function(){
