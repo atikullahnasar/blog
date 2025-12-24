@@ -41,7 +41,7 @@
                     <th class="p-3 font-semibold text-gray-700">Category</th>
                     <th class="p-3 font-semibold text-gray-700">Publish Date</th>
                     <th class="p-3 font-semibold text-gray-700">Status</th>
-                    <th class="p-3 font-semibold text-center text-gray-700">Action</th>
+                    <th class="p-3 font-semibold text-gray-700"><span class="flex justify-center">Action</span></th>
                 </tr>
             </thead>
         </table>
@@ -58,12 +58,12 @@
                 <div class="sm:flex sm:items-start">
                     <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
                         <div class="flex justify-between items-center mb-4">
-                             <h5 id="modal-title" class="text-xl font-bold text-gray-900">Add New Blog</h5>
-                             <button type="button" class="text-gray-400 hover:text-gray-500" id="addEditClose">
-                                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                 </svg>
-                             </button>
+                            <h5 id="modal-title" class="text-xl font-bold text-gray-900">Add New Blog</h5>
+                            <button type="button" class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-700 mb-2" id="addEditClose">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
                         </div>
 
                         <form id="blog-form" enctype="multipart/form-data">

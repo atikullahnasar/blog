@@ -34,9 +34,9 @@
             <table id="blog-category-table" class="w-full text-left border-collapse">
                 <thead>
                     <tr class="bg-gray-100 border-b">
-                        <th class="p-3 font-semibold text-center text-gray-700">Name</th>
-                        <th class="p-3 font-semibold text-center text-gray-700">Status</th>
-                        <th class="p-3 font-semibold text-center text-gray-700">Action</th>
+                        <th class="p-3 font-semibold text-gray-700">Name</th>
+                        <th class="p-3 font-semibold text-gray-700">Status</th>
+                        <th class="p-3 font-semibold text-gray-700"><span class="flex justify-center">Action</span></th>
                     </tr>
                 </thead>
             </table>
